@@ -4,8 +4,10 @@
 
 -It is developed using React, Python Django and MongoDB.
 
-- Reactapp folder contains all the Front End Code.
+-Reactapp folder contains all the Front End Code.
 
-- Python API folder contains the code for web services communicaton between mongo and front-end.
+-Install the node modules using yarn as they cannot be uploaded.
 
-- Mongo DB needs to installed on the Machine.
+-Python API folder contains the code for web services communicaton between mongo and front-end.
+
+-Mongo DB needs to installed on the Machine.
