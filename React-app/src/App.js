@@ -2,28 +2,32 @@ import React from 'react';
 import logo from './logo.svg';
 import Main from './Components/main.js'
 import './App.css';
+import UpdateRow from './Components/updateRowDetails.js';
+import AddRow from './Components/addRowDetails.js';
 
+import {
+  Router,
+  Switch,
+  Route,
+  Link
+
+} from "react-router-dom";
+
+import history from './history';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
    
-    <div className="App">
-      
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-     <Main/>
+    <div className="App">     
+      <Router history={history}>
+      <Switch>
+          <Route exact path="/" component = {Main}/>
+          <Route path="/add" component = {AddRow}/>
+          <Route path="/update" component = {UpdateRow}/>
+        </Switch>
+        </Router>
     </div>
    
   );
